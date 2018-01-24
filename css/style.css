@@ -1,22 +1,36 @@
 body {
     background-color: rgb(245,218,189);
+    color: rgb(140,136,111);
     text-align: center;
     margin: 0;
-    font-weight: lighter;
+    font-weight: bolder;
 }
 
 #salmon {
     opacity: 0.2;
+    padding-top: 70px;
+    padding-bottom: 40px;
 }
 
 nav {
     list-style-type: none;
+    width:100%;
+    padding: 10px;
+    background-color: rgb(140,136,111);
 }
 
 li {
     display: inline;
-    align-items: right;
-    text-decoration: none;
-    padding: 50px;
 }
 
+li a {
+    color: rgb(245,218,189);
+    text-decoration: none;
+    padding: 100px;
+}
+
+#alt-container {
+    background-color: rgb(249,167,153);
+    border: 2px solid white;
+    padding: 100px;
+}
