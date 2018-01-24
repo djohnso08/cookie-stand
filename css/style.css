@@ -26,10 +26,6 @@ nav {
     font-weight: lighter;
 }
 
-.menu a:hover {
-    font-weight: bold;
-}
-
 li {
     display: inline;
 }
