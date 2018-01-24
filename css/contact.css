@@ -30,3 +30,20 @@ button {
     padding: 10px;
     background-color: rgb(140,136,111);
 }
+
+a:hover {
+    cursor: pointer;
+}
+
+.sub-text {
+    font-size: 14px;
+}
+
+#information, #write, #hours {
+    float: left;
+    padding: 70px;
+}
+
+#container {
+    display:inline-block;
+}
