@@ -1,4 +1,11 @@
 body {
-    background-color: rgb(245,218,189)
+    background-color: rgb(245,218,189);
+    text-align: center;
+    margin: 0;
+    font-weight: lighter;
+}
+
+#salmon {
+    opacity: 0.2;
 }
 
