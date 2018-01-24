@@ -9,3 +9,14 @@ body {
     opacity: 0.2;
 }
 
+nav {
+    list-style-type: none;
+}
+
+li {
+    display: inline;
+    align-items: right;
+    text-decoration: none;
+    padding: 50px;
+}
+
