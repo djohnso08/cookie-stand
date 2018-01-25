@@ -6,7 +6,8 @@ var Pike = {
   store: '1st and Pike',
   minCust: 23,
   maxCust: 65,
-  avgCust: 6.3,
+  avgCookies: 6.3,
+  total: 0,
   randNum: function() {
     return Math.floor(Math.random() * (this.maxCust - this.minCust)) + 1;
   },
@@ -17,7 +18,8 @@ var SeaTac = {
   store: 'SeaTac Airport',
   minCust: 3,
   maxCust: 24,
-  avgCust: 1.2,
+  avgCookies: 1.2,
+  total: 0,
   randNum: function() {
     return Math.floor(Math.random() * (this.maxCust - this.minCust)) + 1;
   },
@@ -28,7 +30,8 @@ var Seattle = {
   store: 'Seattle Center',
   minCust: 11,
   maxCust: 38,
-  avgCust: 3.7,
+  avgCookies: 3.7,
+  total: 0,
   randNum: function() {
     return Math.floor(Math.random() * (this.maxCust - this.minCust)) + 1;
   },
@@ -39,7 +42,8 @@ var CapHill = {
   store: 'Capitol Hill',
   minCust: 20,
   maxCust: 38,
-  avgCust: 2.3,
+  avgCookies: 2.3,
+  total: 0,
   randNum: function() {
     return Math.floor(Math.random() * (this.maxCust - this.minCust)) + 1;
   },
@@ -50,7 +54,8 @@ var Alki = {
   store: 'Alki',
   minCust: 2,
   maxCust: 16,
-  avgCust: 4.6,
+  avgCookies: 4.6,
+  total: 0,
   randNum: function() {
     return Math.floor(Math.random() * (this.maxCust - this.minCust)) + 1;
   },
