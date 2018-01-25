@@ -8,10 +8,10 @@ var pike = {
   maxCust: 65,
   avgCust: 6.3,
   randNum: function() {
-    return Math.floor(Math.random() * (pike.maxCust - pike.minCust)) + 1;
+    return Math.floor(Math.random() * (this.maxCust - this.minCust)) + 1;
   },
-  cookiesPerHr: [],
-  results: []
+  cookiesPerHr: '' ,
+  totalCookies: [],
 };
 
 var pike = {
