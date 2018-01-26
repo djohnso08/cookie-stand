@@ -165,3 +165,44 @@ var CapitolHill = {
   }
 };
 CapitolHill.render();
+
+var Alki = {
+  name: 'Alki',
+  minCust: 3,
+  maxCust: 24,
+  avgCookies: 1.2,
+  randCust: [],
+  cookiesPerHr: [],
+  totalCookies: 0,
+  calcRand: function() {
+    for (var i = 0; i < hoursArray.length; i++) {
+      this.randCust.push(
+        Math.floor(
+          Math.random() * (this.maxCust - this.minCust + 1)
+        ) + this.minCust
+      );
+    }
+  },
+  calcCookies: function() {
+    for (var j = 0; j < hoursArray.length; j++) {
+      this.cookiesPerHr.push(
+        Math.round(this.avgCookies * this.randCust[j])
+      );
+    }
+  },
+  render: function() {
+    var alki = document.getElementById('alki');
+    this.calcRand();
+    this.calcCookies();
+    var h3El = document.createElement('h3');
+    h3El.textContent = this.name;
+    alki.appendChild(h3El);
+    for (var k = 0; k < hoursArray.length; k++) {
+      var liEl = document.createElement('li');
+      liEl.textContent =
+        hoursArray[k] + ': ' + this.cookiesPerHr[k] + ' cookies';
+      alki.appendChild(liEl);
+    }
+  }
+};
+Alki.render();

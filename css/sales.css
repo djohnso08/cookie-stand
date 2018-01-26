@@ -31,12 +31,15 @@ li {
 }
 
 h3 {
-    display:inline;
-    padding: 0px 20px 0px 20px; 
+    display: inline;
 }
 
-#firstpike, #seatac, #seattlecenter, #capitolhill {
+#firstpike, #seatac, #seattlecenter, #capitolhill, #alki {
     width: 15%;
     float: left;
+}
+
+#seatac, #seattlecenter, #capitolhill, #alki {
+    margin-left: 20px;
 }
 
