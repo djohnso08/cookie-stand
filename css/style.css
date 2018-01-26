@@ -51,3 +51,11 @@ button {
 a:hover {
     cursor: pointer;
 }
+
+#paragraph {
+    width: 25%;
+}
+
+#shop {
+    font-size: 16px;
+}

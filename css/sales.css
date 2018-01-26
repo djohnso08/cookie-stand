@@ -1,8 +1,5 @@
 body {
     background-color: rgb(245,218,189);
-    text-align: center;
-    margin: 0;
-    font-weight: bolder;
 }
 
 nav {
@@ -12,14 +9,25 @@ nav {
     background-color: rgb(140,136,111);
     font-family: 'Raleway', sans-serif;
     font-weight: lighter;
+    text-align: center;
+    margin: 0;
 }
 
-li {
+nav li {
     display: inline;
 }
 
-li a {
+nav li a {
     color: rgb(245,218,189);
     text-decoration: none;
     padding: 100px;
+}
+
+li {
+    list-style-type: none;
+}
+
+h3 {
+    display:inline;
+    padding: 20px 20px; 
 }
