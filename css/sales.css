@@ -35,11 +35,8 @@ h3 {
     padding: 0px 20px 0px 20px; 
 }
 
-#firstpike {
+#firstpike, #seatac, #seattlecenter, #capitolhill {
     width: 15%;
-}
-
-#seatac {
-    width: 15%;
+    float: left;
 }
 
