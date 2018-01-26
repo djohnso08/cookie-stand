@@ -1,3 +1,6 @@
+* {
+    border: 2px solid black;
+}
 body {
     background-color: rgb(245,218,189);
 }
@@ -20,7 +23,7 @@ nav li {
 nav li a {
     color: rgb(245,218,189);
     text-decoration: none;
-    padding: 100px;
+    padding: 0px 70px 0px 70px;
 }
 
 li {
@@ -29,5 +32,14 @@ li {
 
 h3 {
     display:inline;
-    padding: 20px 20px; 
+    padding: 0px 20px 0px 20px; 
 }
+
+#firstpike {
+    width: 15%;
+}
+
+#seatac {
+    width: 15%;
+}
+

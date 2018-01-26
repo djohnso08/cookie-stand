@@ -28,12 +28,11 @@ var Pike = {
   },
   render: function() {
     var firstpike = document.getElementById('firstpike');
-    var fandp = document.getElementById('fandp');
     this.calcRand();
     this.calcCookies();
     var h3El = document.createElement('h3');
     h3El.textContent = this.name;
-    fandp.appendChild(h3El);
+    firstpike.appendChild(h3El);
     for (var k = 0; k < hoursArray.length; k++) {
       var liEl = document.createElement('li');
       liEl.textContent =
@@ -44,210 +43,43 @@ var Pike = {
 };
 Pike.render();
 
-// var firstAndPike = {
-//   name: 'First and Pike',
-//   //creating key value pairs inside of my object they are called properties
-//   minCustPerHour: 23,
-//   maxCustPerHour: 65,
-//   avgCookiesSoldPerHour: 6.3,
-//   randCustByHour: [],
-//   cookiesSoldByHour: [],
-//   totalCookies: 0,
-//   //method for random customers by hour
-//   calcRandCustByHour: function() {
-//     for (var i = 0; i < hours.length; i++) {
-//       this.randCustByHour.push(
-//         Math.floor(
-//           Math.random() * (this.maxCustPerHour - this.minCustPerHour + 1)
-//         ) + this.minCustPerHour
-//       );
-//       console.log(this.randCustByHour[i]);
-//     }
-//   },
-//   //method for cookies sold by hour
-//   calcCookiesSoldByHour: function() {
-//     for (var j = 0; j < hours.length; j++) {
-//       this.cookiesSoldByHour.push(
-//         Math.round(this.avgCookiesSoldPerHour * this.randCustByHour[j])
-//       );
-//       console.log(this.cookiesSoldByHour[j]);
-//     }
-//   },
-//   render: function() {
-//     var firstandpike = document.getElementById('firstandpike');
-//     var fandp = document.getElementById('fandp');
-//     //calling the methods in the object literal
-//     this.calcRandCustByHour();
-//     this.calcCookiesSoldByHour();
-//     var h3El = document.createElement('h3');
-//     //give text to the new h3 element
-//     h3El.textContent = this.name;
-//     fandp.appendChild(h3El);
-//     for (var k = 0; k < hours.length; k++) {
-//       //stepping through the hours array
-//       var liEl = document.createElement('li');
-//       //creating li elements with text of the hours
-//       liEl.textContent =
-//         hours[k] + ': ' + this.cookiesSoldByHour[k] + ' cookies';
-//       console.log(liEl);
-//       firstandpike.appendChild(liEl);
-//     }
-//   }
-// };
-// firstAndPike.render();
-
-// var firstAndPike = {
-//   name: 'First and Pike',
-//   //creating key value pairs inside of my object they are called properties
-//   minCustPerHour: 23,
-//   maxCustPerHour: 65,
-//   avgCookiesSoldPerHour: 6.3,
-//   randCustByHour: [],
-//   cookiesSoldByHour: [],
-//   totalCookies: 0,
-//   //method for random customers by hour
-//   calcRandCustByHour: function() {
-//     for (var i = 0; i < hours.length; i++) {
-//       this.randCustByHour.push(
-//         Math.floor(
-//           Math.random() * (this.maxCustPerHour - this.minCustPerHour + 1)
-//         ) + this.minCustPerHour
-//       );
-//       console.log(this.randCustByHour[i]);
-//     }
-//   },
-//   //method for cookies sold by hour
-//   calcCookiesSoldByHour: function() {
-//     for (var j = 0; j < hours.length; j++) {
-//       this.cookiesSoldByHour.push(
-//         Math.round(this.avgCookiesSoldPerHour * this.randCustByHour[j])
-//       );
-//       console.log(this.cookiesSoldByHour[j]);
-//     }
-//   },
-//   render: function() {
-//     var firstandpike = document.getElementById('firstandpike');
-//     var fandp = document.getElementById('fandp');
-//     //calling the methods in the object literal
-//     this.calcRandCustByHour();
-//     this.calcCookiesSoldByHour();
-//     var h3El = document.createElement('h3');
-//     //give text to the new h3 element
-//     h3El.textContent = this.name;
-//     fandp.appendChild(h3El);
-//     for (var k = 0; k < hours.length; k++) {
-//       //stepping through the hours array
-//       var liEl = document.createElement('li');
-//       //creating li elements with text of the hours
-//       liEl.textContent =
-//         hours[k] + ': ' + this.cookiesSoldByHour[k] + ' cookies';
-//       console.log(liEl);
-//       firstandpike.appendChild(liEl);
-//     }
-//   }
-// };
-// firstAndPike.render();
-
-// var firstAndPike = {
-//   name: 'First and Pike',
-//   //creating key value pairs inside of my object they are called properties
-//   minCustPerHour: 23,
-//   maxCustPerHour: 65,
-//   avgCookiesSoldPerHour: 6.3,
-//   randCustByHour: [],
-//   cookiesSoldByHour: [],
-//   totalCookies: 0,
-//   //method for random customers by hour
-//   calcRandCustByHour: function() {
-//     for (var i = 0; i < hours.length; i++) {
-//       this.randCustByHour.push(
-//         Math.floor(
-//           Math.random() * (this.maxCustPerHour - this.minCustPerHour + 1)
-//         ) + this.minCustPerHour
-//       );
-//       console.log(this.randCustByHour[i]);
-//     }
-//   },
-//   //method for cookies sold by hour
-//   calcCookiesSoldByHour: function() {
-//     for (var j = 0; j < hours.length; j++) {
-//       this.cookiesSoldByHour.push(
-//         Math.round(this.avgCookiesSoldPerHour * this.randCustByHour[j])
-//       );
-//       console.log(this.cookiesSoldByHour[j]);
-//     }
-//   },
-//   render: function() {
-//     var firstandpike = document.getElementById('firstandpike');
-//     var fandp = document.getElementById('fandp');
-//     //calling the methods in the object literal
-//     this.calcRandCustByHour();
-//     this.calcCookiesSoldByHour();
-//     var h3El = document.createElement('h3');
-//     //give text to the new h3 element
-//     h3El.textContent = this.name;
-//     fandp.appendChild(h3El);
-//     for (var k = 0; k < hours.length; k++) {
-//       //stepping through the hours array
-//       var liEl = document.createElement('li');
-//       //creating li elements with text of the hours
-//       liEl.textContent =
-//         hours[k] + ': ' + this.cookiesSoldByHour[k] + ' cookies';
-//       console.log(liEl);
-//       firstandpike.appendChild(liEl);
-//     }
-//   }
-// };
-// firstAndPike.render();
-
-// var firstAndPike = {
-//   name: 'First and Pike',
-//   //creating key value pairs inside of my object they are called properties
-//   minCustPerHour: 23,
-//   maxCustPerHour: 65,
-//   avgCookiesSoldPerHour: 6.3,
-//   randCustByHour: [],
-//   cookiesSoldByHour: [],
-//   totalCookies: 0,
-//   //method for random customers by hour
-//   calcRandCustByHour: function() {
-//     for (var i = 0; i < hours.length; i++) {
-//       this.randCustByHour.push(
-//         Math.floor(
-//           Math.random() * (this.maxCustPerHour - this.minCustPerHour + 1)
-//         ) + this.minCustPerHour
-//       );
-//       console.log(this.randCustByHour[i]);
-//     }
-//   },
-//   //method for cookies sold by hour
-//   calcCookiesSoldByHour: function() {
-//     for (var j = 0; j < hours.length; j++) {
-//       this.cookiesSoldByHour.push(
-//         Math.round(this.avgCookiesSoldPerHour * this.randCustByHour[j])
-//       );
-//       console.log(this.cookiesSoldByHour[j]);
-//     }
-//   },
-//   render: function() {
-//     var firstandpike = document.getElementById('firstandpike');
-//     var fandp = document.getElementById('fandp');
-//     //calling the methods in the object literal
-//     this.calcRandCustByHour();
-//     this.calcCookiesSoldByHour();
-//     var h3El = document.createElement('h3');
-//     //give text to the new h3 element
-//     h3El.textContent = this.name;
-//     fandp.appendChild(h3El);
-//     for (var k = 0; k < hours.length; k++) {
-//       //stepping through the hours array
-//       var liEl = document.createElement('li');
-//       //creating li elements with text of the hours
-//       liEl.textContent =
-//         hours[k] + ': ' + this.cookiesSoldByHour[k] + ' cookies';
-//       console.log(liEl);
-//       firstandpike.appendChild(liEl);
-//     }
-//   }
-// };
-// firstAndPike.render();
+var SeaTac = {
+  name: 'SeaTac Airport',
+  minCust: 3,
+  maxCust: 24,
+  avgCookies: 1.2,
+  randCust: [],
+  cookiesPerHr: [],
+  totalCookies: 0,
+  calcRand: function() {
+    for (var i = 0; i < hoursArray.length; i++) {
+      this.randCust.push(
+        Math.floor(
+          Math.random() * (this.maxCust - this.minCust + 1)
+        ) + this.minCust
+      );
+    }
+  },
+  calcCookies: function() {
+    for (var j = 0; j < hoursArray.length; j++) {
+      this.cookiesPerHr.push(
+        Math.round(this.avgCookies * this.randCust[j])
+      );
+    }
+  },
+  render: function() {
+    var seatac = document.getElementById('seatac');
+    this.calcRand();
+    this.calcCookies();
+    var h3El = document.createElement('h3');
+    h3El.textContent = this.name;
+    seatac.appendChild(h3El);
+    for (var k = 0; k < hoursArray.length; k++) {
+      var liEl = document.createElement('li');
+      liEl.textContent =
+        hoursArray[k] + ': ' + this.cookiesPerHr[k] + ' cookies';
+      seatac.appendChild(liEl);
+    }
+  }
+};
+SeaTac.render();
