@@ -1,175 +1,45 @@
 'use strict';
-
+var stores = [];
 var hoursArray = [' 6am ',' 7am ',' 8am ',' 9am ',' 10am ',' 11am ',' 12pm ',' 1pm ',' 2pm ',' 3pm ',' 4pm ',' 5pm ',' 6pm ',' 7pm ',' 8pm '];
 
-var Pike = {
-  name: '1st and Pike',
-  minCust: 23,
-  maxCust: 65,
-  avgCookies: 6.3,
-  randCust: [],
-  cookiesPerHr: [],
-  totalCookies: 0,
-  calcRand: function() {
+function Store(name, minCust, maxCust, avgCookies) {
+  this.name = name;
+  this.minCust = minCust;
+  this.maxCust = maxCust;
+  this.avgCookies = avgCookies;
+  this.randCust = [];
+  this.cookiesPerHr = [];
+  this.totalCookies = 0;
+  stores.push(this);
+  this.calcRand = function() {
     for (var i = 0; i < hoursArray.length; i++) {
       this.randCust.push(Math.floor(Math.random() * (this.maxCust - this.minCust + 1)) + this.minCust);
     }
-  },
-  calcCookies: function() {
+  };
+  this.calcCookies = function() {
     for (var j = 0; j < hoursArray.length; j++) {
       this.cookiesPerHr.push(Math.round(this.avgCookies * this.randCust[j]));
     }
-  },
-  render: function() {
-    var firstpike = document.getElementById('firstpike');
+  };
+  this.render = function() {
+    var table = document.getElementsByTagName('table');
     this.calcRand();
     this.calcCookies();
-    var h3El = document.createElement('h3');
-    h3El.textContent = this.name;
-    firstpike.appendChild(h3El);
+    var trEl = document.createElement('tr');
+    trEl.textContent = this.name;
+    table.appendChild(trEl);
     for (var k = 0; k < hoursArray.length; k++) {
-      var liEl = document.createElement('li');
-      liEl.textContent = hoursArray[k] + ': ' + this.cookiesPerHr[k] + ' cookies';
-      firstpike.appendChild(liEl);
+      var tdEl = document.createElement('td');
+      tdEl.textContent = hoursArray[k] + ': ' + this.cookiesPerHr[k] + ' cookies';
+      table.appendChild(tdEl);
     }
-  }
-};
-Pike.render();
+  };
+}
 
-var SeaTac = {
-  name: 'SeaTac Airport',
-  minCust: 3,
-  maxCust: 24,
-  avgCookies: 1.2,
-  randCust: [],
-  cookiesPerHr: [],
-  totalCookies: 0,
-  calcRand: function() {
-    for (var i = 0; i < hoursArray.length; i++) {
-      this.randCust.push(
-        Math.floor(Math.random() * (this.maxCust - this.minCust + 1)) + this.minCust);
-    }
-  },
-  calcCookies: function() {
-    for (var j = 0; j < hoursArray.length; j++) {
-      this.cookiesPerHr.push(Math.round(this.avgCookies * this.randCust[j]));
-    }
-  },
-  render: function() {
-    var seatac = document.getElementById('seatac');
-    this.calcRand();
-    this.calcCookies();
-    var h3El = document.createElement('h3');
-    h3El.textContent = this.name;
-    seatac.appendChild(h3El);
-    for (var k = 0; k < hoursArray.length; k++) {
-      var liEl = document.createElement('li');
-      liEl.textContent = hoursArray[k] + ': ' + this.cookiesPerHr[k] + ' cookies';
-      seatac.appendChild(liEl);
-    }
-  }
-};
-SeaTac.render();
-
-var SeattleCenter = {
-  name: 'Seattle Center',
-  minCust: 23,
-  maxCust: 65,
-  avgCookies: 6.3,
-  randCust: [],
-  cookiesPerHr: [],
-  totalCookies: 0,
-  calcRand: function() {
-    for (var i = 0; i < hoursArray.length; i++) {
-      this.randCust.push(
-        Math.floor(Math.random() * (this.maxCust - this.minCust + 1)) + this.minCust);
-    }
-  },
-  calcCookies: function() {
-    for (var j = 0; j < hoursArray.length; j++) {
-      this.cookiesPerHr.push(Math.round(this.avgCookies * this.randCust[j]));
-    }
-  },
-  render: function() {
-    var seattlecenter = document.getElementById('seattlecenter');
-    this.calcRand();
-    this.calcCookies();
-    var h3El = document.createElement('h3');
-    h3El.textContent = this.name;
-    seattlecenter.appendChild(h3El);
-    for (var k = 0; k < hoursArray.length; k++) {
-      var liEl = document.createElement('li');
-      liEl.textContent = hoursArray[k] + ': ' + this.cookiesPerHr[k] + ' cookies';
-      seattlecenter.appendChild(liEl);
-    }
-  }
-};
-SeattleCenter.render();
-
-var CapitolHill = {
-  name: 'Capitol Hill',
-  minCust: 3,
-  maxCust: 24,
-  avgCookies: 1.2,
-  randCust: [],
-  cookiesPerHr: [],
-  totalCookies: 0,
-  calcRand: function() {
-    for (var i = 0; i < hoursArray.length; i++) {
-      this.randCust.push(Math.floor(Math.random() * (this.maxCust - this.minCust + 1)) + this.minCust);
-    }
-  },
-  calcCookies: function() {
-    for (var j = 0; j < hoursArray.length; j++) {
-      this.cookiesPerHr.push(Math.round(this.avgCookies * this.randCust[j]));
-    }
-  },
-  render: function() {
-    var capitolhill = document.getElementById('capitolhill');
-    this.calcRand();
-    this.calcCookies();
-    var h3El = document.createElement('h3');
-    h3El.textContent = this.name;
-    capitolhill.appendChild(h3El);
-    for (var k = 0; k < hoursArray.length; k++) {
-      var liEl = document.createElement('li');
-      liEl.textContent = hoursArray[k] + ': ' + this.cookiesPerHr[k] + ' cookies';
-      capitolhill.appendChild(liEl);
-    }
-  }
-};
-CapitolHill.render();
-
-var Alki = {
-  name: 'Alki',
-  minCust: 3,
-  maxCust: 24,
-  avgCookies: 1.2,
-  randCust: [],
-  cookiesPerHr: [],
-  totalCookies: 0,
-  calcRand: function() {
-    for (var i = 0; i < hoursArray.length; i++) {
-      this.randCust.push(Math.floor(Math.random() * (this.maxCust - this.minCust + 1)) + this.minCust);
-    }
-  },
-  calcCookies: function() {
-    for (var j = 0; j < hoursArray.length; j++) {
-      this.cookiesPerHr.push(Math.round(this.avgCookies * this.randCust[j]));
-    }
-  },
-  render: function() {
-    var alki = document.getElementById('alki');
-    this.calcRand();
-    this.calcCookies();
-    var h3El = document.createElement('h3');
-    h3El.textContent = this.name;
-    alki.appendChild(h3El);
-    for (var k = 0; k < hoursArray.length; k++) {
-      var liEl = document.createElement('li');
-      liEl.textContent = hoursArray[k] + ': ' + this.cookiesPerHr[k] + ' cookies';
-      alki.appendChild(liEl);
-    }
-  }
-};
-Alki.render();
+function newStores() {
+  new Store('1st and Pike', 23, 65, 6.3);
+  new Store('SeaTac Airport', 3, 24, 1.2);
+  new Store('Seattle Center', 11, 38, 3.7);
+  new Store('Capitol Hill', 20, 38, 2.3);
+  new Store('Alki', 2, 16, 4.6);
+}
