@@ -1,0 +1,51 @@
+* {
+    outline: none;
+}
+
+body {
+    background-color: rgb(245,218,189);
+    text-align: center;
+    margin: 0;
+    font-weight: bolder;
+    font-family: 'Varela Round', sans-serif;
+}
+
+nav {
+    list-style-type: none;
+    width:100%;
+    padding: 10px;
+    background-color: rgb(140,136,111);
+    font-weight: lighter;
+}
+
+li {
+    display: inline;
+}
+
+li a {
+    color: rgb(245,218,189);
+    text-decoration: none;
+    padding: 0px 100px 0px 100px;
+}
+
+button {
+    padding: 10px;
+    background-color: rgb(140,136,111);
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+.sub-text {
+    font-size: 14px;
+}
+
+#information, #write, #hours {
+    float: left;
+    padding: 70px;
+}
+
+#container {
+    display:inline-block;
+}

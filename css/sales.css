@@ -1,0 +1,38 @@
+body {
+    background-color: rgb(245,218,189);
+    font-family: 'Varela Round', sans-serif;
+}
+
+nav {
+    list-style-type: none;
+    width:100%;
+    padding: 10px;
+    background-color: rgb(140,136,111);
+    font-weight: lighter;
+    text-align: center;
+    margin: 0;
+}
+
+nav li {
+    display: inline;
+}
+
+nav li a {
+    color: rgb(245,218,189);
+    text-decoration: none;
+    padding: 0px 70px 0px 70px;
+}
+
+li {
+    list-style-type: none;
+}
+
+#firstpike, #seatac, #seattlecenter, #capitolhill, #alki {
+    width: 15%;
+    float: left;
+}
+
+#seatac, #seattlecenter, #capitolhill, #alki {
+    margin-left: 20px;
+}
+
