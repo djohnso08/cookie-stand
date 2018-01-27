@@ -2,7 +2,7 @@
 
 var hoursArray = [' 6am ',' 7am ',' 8am ',' 9am ',' 10am ',' 11am ',' 12pm ',' 1pm ',' 2pm ',' 3pm ',' 4pm ',' 5pm ',' 6pm ',' 7pm ',' 8pm '];
 
-var Pike = {
+var pike = {
   name: '1st and Pike',
   minCust: 23,
   maxCust: 65,
@@ -34,9 +34,9 @@ var Pike = {
     }
   }
 };
-Pike.render();
+pike.render();
 
-var SeaTac = {
+var seaTac = {
   name: 'SeaTac Airport',
   minCust: 3,
   maxCust: 24,
@@ -69,9 +69,9 @@ var SeaTac = {
     }
   }
 };
-SeaTac.render();
+seaTac.render();
 
-var SeattleCenter = {
+var seattleCenter = {
   name: 'Seattle Center',
   minCust: 23,
   maxCust: 65,
@@ -104,9 +104,9 @@ var SeattleCenter = {
     }
   }
 };
-SeattleCenter.render();
+seattleCenter.render();
 
-var CapitolHill = {
+var capitolHill = {
   name: 'Capitol Hill',
   minCust: 3,
   maxCust: 24,
@@ -138,9 +138,9 @@ var CapitolHill = {
     }
   }
 };
-CapitolHill.render();
+capitolHill.render();
 
-var Alki = {
+var alki = {
   name: 'Alki',
   minCust: 3,
   maxCust: 24,
@@ -172,4 +172,4 @@ var Alki = {
     }
   }
 };
-Alki.render();
+alki.render();
