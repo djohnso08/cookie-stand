@@ -1,5 +1,8 @@
 body {
     background-color: rgb(245,218,189);
+    text-align: center;
+    margin: 0;
+    font-weight: bolder;
     font-family: 'Varela Round', sans-serif;
 }
 
@@ -9,8 +12,6 @@ nav {
     padding: 10px;
     background-color: rgb(140,136,111);
     font-weight: lighter;
-    text-align: center;
-    margin: 0;
 }
 
 nav li {
@@ -27,12 +28,6 @@ li {
     list-style-type: none;
 }
 
-#firstpike, #seatac, #seattlecenter, #capitolhill, #alki {
-    width: 15%;
-    float: left;
+th {
+   padding: 15px;
 }
-
-#seatac, #seattlecenter, #capitolhill, #alki {
-    margin-left: 20px;
-}
-
