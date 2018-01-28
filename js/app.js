@@ -13,6 +13,7 @@ function Store(name, minCust, maxCust, avgCookies) {
   this.totalCookies = 0;
   stores.push(this);
   this.calcRand = function() {
+
     for (var i = 0; i < hoursArray.length; i++) {
       this.randCust.push(Math.floor(Math.random() * (this.maxCust - this.minCust + 1)) + this.minCust);
     }
@@ -37,7 +38,6 @@ function Store(name, minCust, maxCust, avgCookies) {
   };
 }
 
-
 function makeHeader() {
   var sales = document.getElementById('sales-section');
 
@@ -52,8 +52,6 @@ function makeHeader() {
 }
 
 makeHeader();
-
-
 
 function newStores() {
   new Store('1st and Pike', 23, 65, 6.3);
