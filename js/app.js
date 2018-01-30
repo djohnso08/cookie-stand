@@ -39,6 +39,7 @@ function Stores(name,minCust,maxCust,avgCookies) {
   //THINK ABOUT PROTOTYPES
   // }
   this.calcRand = function() {
+
     for (var i = 0; i < hoursArray.length; i++) {
       this.randCust.push(Math.floor(Math.random() * (this.maxCust - this.minCust + 1)) + this.minCust);
     }
