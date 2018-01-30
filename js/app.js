@@ -94,7 +94,7 @@ for (var j = 0; j < allLocations.length; j++) {
     var cookiestands = document.getElementById('cookiestands');
     var trEl = document.createElement('tr');
     var tdEl = document.createElement('td');
-    tdEl.textContent = allLocations[j].name
+    tdEl.textContent = allLoca tions[j].name
     trEl.appendChild(tdEl);
 
     for (var i = 0; i < hours.length; i++) {
@@ -125,3 +125,4 @@ for (var j = 0; j < allLocations.length; j++) {
 //create a th element
 //give the th element text content 'Daily Location Total'
 //append child
+
