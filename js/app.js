@@ -71,19 +71,50 @@ makeNewStore();
 //table needs an id in html
 
 function makeHeader() {
-  var sales = document.getElementById('sales-section');
+  var cookiesrands = document.getElementById('cookiestands');
   var trEl = document.createElement('tr');
   var thEl = document.createElement('th');
   trEl.appendChild(thEl);
-  for(var k = 0;k < hoursArray.length;k++) {
-    var header = document.createElemenet('th');
-    thEl.textContent = hoursArray[i];
-    thEl.appendChild(header);
-  }
-  makeHeader();
-}
 
-console.log(maNewStore());
+  for(var k = 0;k < hours.length;k++) {
+    thEl = document.createElemenet('th');
+    thEl.textContent = hours[i];
+    trEl.appendChild(thEl);
+  }
+  thEl = document.createElement('th');
+  thEl.textContent = 'Daily Location Total';
+  trEl.appendChild(thEl);
+  cookiestands.appendChild(trEl);
+};
+makeHeaderRow();
+
+//make data rows
+for (var j = 0; j < allLocations.length; j++) {
+  function makeOneDataRow() {
+    var cookiestands = document.getElementById('cookiestands');
+    var trEl = document.createElement('tr');
+    var tdEl = document.createElement('td');
+    tdEl.textContent = allLocations[j].name
+    trEl.appendChild(tdEl);
+
+    for (var i = 0; i < hours.length; i++) {
+      tdEl = document.createElement('td');
+      tdEl.textContent = allLocations[j].cookiesSoldByHour[i];
+      trEl.appendChild(trEl);
+    };
+    tdEl = document.createElement('td')
+    tdEl.textContent = allLocations[j].totalCookies;
+    trEl.appendChild(tdEl);
+    cookiestands.appendChild(trEl);
+  }
+    makeOneDataRow();
+  };
+
+  fucntion makeTotalsRow() {
+    var cookiestands = document.getElementById('cookiestands');
+
+  }
+
 
 
   //consider a for loop for the hours
