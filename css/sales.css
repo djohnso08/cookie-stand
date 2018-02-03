@@ -10,7 +10,7 @@ nav {
     list-style-type: none;
     width:100%;
     padding: 10px;
-    background-color: rgb(140,136,111);
+    background-color: rgb(249,167,153);
     font-weight: lighter;
 }
 
@@ -19,7 +19,7 @@ nav li {
 }
 
 nav li a {
-    color: rgb(245,218,189);
+    color: rgb(140,136,111);
     text-decoration: none;
     padding: 0px 70px 0px 70px;
 }
@@ -31,3 +31,9 @@ li {
 th {
    padding: 15px;
 }
+
+#cookiestands {
+    font: rgb(140,136,111);
+}
+
+
