@@ -60,10 +60,11 @@ function makeRow() {
   for (var j = 0; j < stores.length; j++) {
     var trEl = document.createElement('tr');
     var tdEl = document.createElement('td');
+
     trEl = document.createElement('tr');
     tdEl.textContent = stores[j].name;
     trEl.appendChild(tdEl);
-  
+
     for (var i = 0; i < hoursArray.length; i++) {
       tdEl = document.createElement('td');
       tdEl.textContent = stores[j].cookiesPerHr[i];
@@ -84,17 +85,20 @@ function makeFooterRow() {
   cookiestands.appendChild(trEl);
   var total = 0;
   for (var i = 0; i < hoursArray.length; i++) {
-    var totalByHr = 0;
-    for (var j = 0; j < stores.length; j++) {
-      totalByHr = totalByHr + stores[j].avgCookies[i];
-      total += stores[j].avgCookies[i];
-    }
-    var tdEl = document.createElement('td');
-    tdEl.textContent = totalByHr;
-    trEl.appendChild(tdEl);
+    // var totalByHr = 0;
+    // for (var j = 0; j < stores.length; j++) {
+      // totalByHr = totalByHr + stores[j].avgCookies[i];
+      // total += stores[j].total[i];
+    total = document.createElement('total');
+    total.textContent = stores[i].total;
+    trEl.appendChild(total);
   }
-  tdEl = document.createElement('td');
-  tdEl.textContent = total;
-  trEl.appendChild(tdEl);
+  // var tdEl = document.createElement('td');
+  // tdEl.textContent = totalByHr;
+  // trEl.appendChild(tdEl);
+
+  // tdEl = document.createElement('td');
+  // tdEl.textContent = total;
+  // trEl.appendChild(tdEl);
 }
 makeFooterRow();
