@@ -8,6 +8,7 @@ body {
     margin: 0;
     font-weight: bolder;
     font-family: 'Varela Round', sans-serif;
+    color: rgb(140,136,111);
 }
 
 nav {
@@ -16,4 +17,14 @@ nav {
     padding: 10px;
     background-color: rgb(249,167,153);
     font-weight: lighter;
+}
+
+li {
+    display: inline;
+}
+
+li a {
+    color: rgb(140,136,111);
+    text-decoration: none;
+    padding: 0px 100px 0px 100px;
 }

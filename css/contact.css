@@ -8,6 +8,7 @@ body {
     margin: 0;
     font-weight: bolder;
     font-family: 'Varela Round', sans-serif;
+    color: rgb(140,136,111);
 }
 
 nav {
@@ -48,4 +49,8 @@ a:hover {
 
 #container {
     display:inline-block;
+}
+
+h3 {
+    color: black;
 }
