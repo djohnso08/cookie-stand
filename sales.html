@@ -1,47 +1,62 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <title>Pat's Cookie Shop</title>
-    <link rel="icon" type="tab icon" href="assets/pink-cookies.jpg" />
-    <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/sales.css">
+  <title>Pat's Cookie Shop</title>
+  <link rel="icon" type="tab icon" href="assets/pink-cookies.jpg" />
+  <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/sales.css">
 </head>
+
 <body>
-    <nav>
-        <ul>
-            <li><a href="index.html">HOME</a></li>
-            <li><a href="sales.html">SALES</a></li>
-            <li><a href="contact.html">CONTACT</a></li>
-            <li><a href="careers.html">CAREERS</a></li>
-            <li><a href="team.html">TEAM</a></li>
-            <li><a href="store.html">STORE</a></li>
-        </ul>
-    </nav>
-    <h3>Salmon Cookie Sales</h3>
-    <table id="cookiestands">
+  <nav>
+    <ul>
+      <li>
+        <a href="index.html">HOME</a>
+      </li>
+      <li>
+        <a href="sales.html">SALES</a>
+      </li>
+      <li>
+        <a href="contact.html">CONTACT</a>
+      </li>
+      <li>
+        <a href="careers.html">CAREERS</a>
+      </li>
+      <li>
+        <a href="team.html">TEAM</a>
+      </li>
+      <li>
+        <a href="store.html">STORE</a>
+      </li>
+    </ul>
+  </nav>
+  <h3>Salmon Cookie Sales</h3>
+  <table id="cookiestands">
 
-    </table>
+  </table>
 
-    <form id="form">
-        <fieldset id="">
-            <legend>Add New Location</legend>
-            <legend>
-                <label for="name">New Name</label>
-                <input id="name" type="text" required="required" />
+  <form id="form">
+    <fieldset>
+      <legend>Add New Location</legend>
 
-                <label for="minCust">Minimum Customer</label>
-                <input id="minCust" type="number" required="required" />
+      <label for="name">New Name</label>
+      <input name="name" type="text" required />
 
-                <label for="maxCust">Maximum Customer</label>
-                <input id="maxCust" type="number" required="required" />
+      <label for="minCust">Minimum Customer</label>
+      <input name="minCust" type="number" required />
 
-                <label for="avgCookies">Average Cookies</label>
-                <input id="avgCookies" type="number" required="required" />
-            </legend>
-            <button type="submit">Submit</button>
-        </fieldset>
-    </form>
+      <label for="maxCust">Maximum Customer</label>
+      <input name="maxCust" type="number" required />
 
-    <script src="js/app.js"></script>
+      <label for="avgCookies">Average Cookies</label>
+      <input name="avgCookies" type="number" required />
+      
+      <button type="submit">Submit</button>
+    </fieldset>
+  </form>
+
+  <script src="js/app.js"></script>
 </body>
+
 </html>
