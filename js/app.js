@@ -108,12 +108,5 @@ makeFooterRow();
 
 // function eventListener(event){
 //   event.preventDefault();
-//   var newStore = new MakeStore();
-  
-//   newStore.name = this.elements['name'].value;
-//   newStore.minCust = this.elements['minCust'].value;
-//   newStore.maxCust = this.elements['maxCust'].value;
-//   newStore.avgCookies = this.elements['avgCookies'].value;
-//   stores.push(newStore);
-// }
+
 // form.addEventListener('submit', eventListener);
