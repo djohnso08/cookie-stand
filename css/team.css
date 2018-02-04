@@ -28,3 +28,6 @@ li a {
     text-decoration: none;
     padding: 0px 100px 0px 100px;
 }
+li a:hover{
+    color: rgb(183,203,191);
+}

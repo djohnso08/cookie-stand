@@ -28,6 +28,10 @@ li {
     list-style-type: none;
 }
 
+li a:hover{
+    color: rgb(183,203,191);
+}
+
 th {
    padding: 15px;
 }
