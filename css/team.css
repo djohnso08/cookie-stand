@@ -1,9 +1,14 @@
+* {
+    outline: none;
+}
+
 body {
     background-color: rgb(245,218,189);
     text-align: center;
     margin: 0;
     font-weight: bolder;
     font-family: 'Varela Round', sans-serif;
+    color: rgb(140,136,111);
 }
 
 nav {
@@ -14,30 +19,15 @@ nav {
     font-weight: lighter;
 }
 
-nav li {
+li {
     display: inline;
 }
 
-nav li a {
+li a {
     color: rgb(140,136,111);
     text-decoration: none;
-    padding: 0px 70px 0px 70px;
+    padding: 0px 100px 0px 100px;
 }
-
-li {
-    list-style-type: none;
-}
-
 li a:hover{
     color: rgb(183,203,191);
 }
-
-th {
-   padding: 15px;
-}
-
-#cookiestands {
-    font: rgb(140,136,111);
-}
-
-

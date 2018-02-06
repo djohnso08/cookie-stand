@@ -1,24 +1,62 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Pat's Cookie Shop</title>
-    <link rel="icon" type="tab icon" href="assets/pink-cookies.jpg" />
-    <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/sales.css">
-</head>
-<body>
-    <nav>
-        <ul>
-            <li><a href="index.html">HOME</a></li>
-            <li><a href="sales.html">SALES</a></li>
-            <li><a href="contact.html">CONTACT</a></li>
-            <li><a href="careers.html">CAREERS</a></li>
-        </ul>
-    </nav>
-    <h3>Salmon Cookie Sales</h3>
-    <table id="cookiestands">
 
-    </table>
-    <script src="js/app.js"></script>
+<head>
+  <title>Pat's Cookie Shop</title>
+  <link rel="icon" type="tab icon" href="assets/pink-cookies.jpg" />
+  <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/sales.css">
+</head>
+
+<body>
+  <nav>
+    <ul>
+      <li>
+        <a href="index.html">HOME</a>
+      </li>
+      <li>
+        <a href="sales.html">SALES</a>
+      </li>
+      <li>
+        <a href="contact.html">CONTACT</a>
+      </li>
+      <li>
+        <a href="careers.html">CAREERS</a>
+      </li>
+      <li>
+        <a href="team.html">TEAM</a>
+      </li>
+      <li>
+        <a href="store.html">STORE</a>
+      </li>
+    </ul>
+  </nav>
+  <h3>Salmon Cookie Sales</h3>
+  <table id="cookiestands">
+
+  </table>
+
+  <form id="form">
+    <fieldset>
+      <legend>Add New Location</legend>
+
+      <label for="name">New Name</label>
+      <input name="name" type="text" required />
+
+      <label for="minCust">Minimum Customer</label>
+      <input name="minCust" type="number" required />
+
+      <label for="maxCust">Maximum Customer</label>
+      <input name="maxCust" type="number" required />
+
+      <label for="avgCookies">Average Cookies</label>
+      <input name="avgCookies" type="number" required />
+      
+      <button type="submit">Submit</button>
+    </fieldset>
+  </form>
+
+  <script src="js/app.js"></script>
 </body>
+
 </html>

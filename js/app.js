@@ -103,3 +103,41 @@ function makeFooterRow() {
   trEl.appendChild(netTd);
 }
 makeFooterRow();
+
+var form = document.getElementById('form');
+
+function eventListener(event){
+  event.preventDefault();
+
+  var name = event.target.name.value;
+  var minCust = parseInt(event.target.minCust.value);
+  var maxCust = parseInt(event.target.maxCust.value);
+  var avgCookies = parseFloat(event.target.avgCookies.value);
+  
+  var newStore = new MakeStore(name, minCust, maxCust, avgCookies);
+  stores.push(newStore);
+
+  var cookiestands = document.getElementById('cookiestands');
+  var trEl = document.createElement('tr');
+  var tdEl = document.createElement('td');
+  trEl = document.createElement('tr');
+  tdEl.textContent = stores[stores.length-1].name;
+  trEl.appendChild(tdEl);
+
+
+  for (var i = 1; i < 2; i++) {
+  tdEl = document.createElement('td');
+  tdEl.textContent = stores[stores.length-1].cookiesPerHr[i];
+  trEl.appendChild(tdEl);
+  }
+  for (var j = 0; j < hoursArray.length; j++) {
+    tdEl = document.createElement('td');
+    tdEl.textContent = stores[stores.length-1].total;
+    trEl.appendChild(tdEl);
+    cookiestands.appendChild(trEl);
+  }
+  newStore.calcCookies();
+  newStore.randCust();
+}
+
+form.addEventListener('submit', eventListener);
